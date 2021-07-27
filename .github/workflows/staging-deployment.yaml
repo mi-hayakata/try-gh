@@ -1,0 +1,21 @@
+name: production-deployment
+# Trigger condition can be update per your preference
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "GitHub Ref (tag, branch, or commit sha)"
+        required: true
+
+jobs:
+  deployment:
+    name: Build and upload files to the s3 buckets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: echo
+        run: |
+          echo "hello gh actions for STG"
