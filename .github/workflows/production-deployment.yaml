@@ -4,9 +4,11 @@ name: production-deployment
 on:
   workflow_dispatch:
     inputs:
-      ref:
-        description: "GitHub Ref for prod (tag, branch, or commit sha)"
+      confirm:
+        description: Your message
         required: true
+    branches:
+      - master
 
 jobs:
   deployment:

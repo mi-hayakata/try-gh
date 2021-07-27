@@ -2,7 +2,7 @@ name: staging-deployment
 # Trigger condition can be update per your preference
 
 on:
-  workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   deployment:
