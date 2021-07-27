@@ -1,4 +1,4 @@
-name: production-deployment
+name: staging-deployment
 # Trigger condition can be update per your preference
 
 on:
