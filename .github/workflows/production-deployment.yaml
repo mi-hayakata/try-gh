@@ -3,12 +3,12 @@ name: production-deployment
 
 on:
   workflow_dispatch:
+    branches:
+      - develop
     inputs:
       confirm:
         description: Your message
         required: true
-    branches:
-      - master
 
 jobs:
   deployment:
