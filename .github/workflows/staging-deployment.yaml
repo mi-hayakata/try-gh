@@ -2,11 +2,7 @@ name: staging-deployment
 # Trigger condition can be update per your preference
 
 on:
-  workflow_dispatch:
-    inputs:
-      ref:
-        description: "GitHub Ref (tag, branch, or commit sha)"
-        required: true
+  workflow_dispatch
 
 jobs:
   deployment:
