@@ -13,8 +13,6 @@ jobs:
     name: Build and upload files to the s3 buckets
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
 
       - name: echo
         run: |
