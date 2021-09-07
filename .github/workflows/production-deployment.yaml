@@ -7,7 +7,7 @@ on:
       - develop
     inputs:
       confirm_message:
-        description: "***WARNING: This workflow executes a deployment to a production environment. Please type 'deploy' to confirm.***"
+        description: "***WARNING: This workflow executes a deployment to a production environment. Please type 'production' to confirm.***"
         required: true
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
 
       - name: Check confirm_message
         run: |
-          if [ "${{ github.event.inputs.confirm_message }}" != 'deploy' ]; then
+          if [ "${{ github.event.inputs.confirm_message }}" != 'production' ]; then
             echo "You must check WARNING message!"
             exit 1
           fi
