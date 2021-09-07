@@ -18,4 +18,7 @@ jobs:
 
       - name: Check confirm_message
         run: |
-          if [ "${{ github.event.inputs.confirm_message }}" != 'deploy' ]; then false; fi
+          if [ "${{ github.event.inputs.confirm_message }}" != 'deploy' ]; then
+            echo "You must check CAUTION message!"
+            exit 1
+          fi
