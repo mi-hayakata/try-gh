@@ -6,8 +6,8 @@ on:
     branches:
       - develop
     inputs:
-      confirm:
-        description: "***Your message***"
+      confirm_message:
+        description: "***CAUTION: This workflow executes a deployment to a production environment. Please type 'deploy' to confirm.***"
         required: true
 
 jobs:
@@ -16,6 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: echo
+      - name: Check confirm_message
         run: |
-          echo "hello gh actions for PROD"
+          if [ "${{ github.event.inputs.confirm_message }}" != 'deploy' ]; then false; fi
