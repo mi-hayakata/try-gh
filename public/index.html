@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://stg-www.sandbox.paypay.ne.jp/app/cashier?code=https%3A%2F%2Fqr-stg.sandbox.paypay.ne.jp%2F28180104hjr7lmFbZbVIH8kw&pid=QRCode&link_key=https://qr-stg.sandbox.paypay.ne.jp/28180104hjr7lmFbZbVIH8kw&af_force_deeplink=true">
+        a link
+    </a>
+    <br>
+
+    <button onclick="window_open('https://stg-www.sandbox.paypay.ne.jp/app/cashier?code=https%3A%2F%2Fqr-stg.sandbox.paypay.ne.jp%2F28180104hjr7lmFbZbVIH8kw&pid=QRCode&link_key=https://qr-stg.sandbox.paypay.ne.jp/28180104hjr7lmFbZbVIH8kw&af_force_deeplink=true')">
+        window_open
+    </button>
+    <br>
+    <button onclick="window_open_blank('https://stg-www.sandbox.paypay.ne.jp/app/cashier?code=https%3A%2F%2Fqr-stg.sandbox.paypay.ne.jp%2F28180104hjr7lmFbZbVIH8kw&pid=QRCode&link_key=https://qr-stg.sandbox.paypay.ne.jp/28180104hjr7lmFbZbVIH8kw&af_force_deeplink=true')">
+        window_open_blank
+    </button>
+    <br>
+    <button onclick="location_href('https://stg-www.sandbox.paypay.ne.jp/app/cashier?code=https%3A%2F%2Fqr-stg.sandbox.paypay.ne.jp%2F28180104hjr7lmFbZbVIH8kw&pid=QRCode&link_key=https://qr-stg.sandbox.paypay.ne.jp/28180104hjr7lmFbZbVIH8kw&af_force_deeplink=true')">
+        location_href
+    </button>
+    <br>
+
+    <script>
+        const window_open = (url) => {
+            window.open(url);
+        }
+        const window_open_blank = (url) => {
+            window.open(url, '_blank');
+        }
+        const location_href = (url) => {
+            window.location.href = url;
+        }
+    </script>
+</body>
+
+</html>
